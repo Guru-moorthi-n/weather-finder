@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Finder</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<% if (locals.bgtype)  { %>
+<body class="bg-<%= bgtype %>">
+  <div class="header">Weather Finder</div>
+  <div class="container">
+    <div class="div1">
+      <form method="POST" action="/">
+        <label>Choose city: </label>
+        <select style="margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.5);" name="city" id="city" required>
+          <option value="" disabled selected hidden>-- Select a city --</option>
+          <option value="Salem">Salem</option>
+          <option value="Erode">Erode</option>
+          <option value="Namakkal">Namakkal</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Tiruchirappalli">Tiruchirappalli</option>
+          <option value="Tirunelveli">Tirunelveli</option>
+          <option value="Thoothukudi">Thoothukudi</option>
+          <option value="Vellore">Vellore</option>
+          <option value="Tiruppur">Tiruppur</option>
+          <option value="Dindigul">Dindigul</option>
+          <option value="Thanjavur">Thanjavur</option>
+          <option value="Kanchipuram">Kanchipuram</option>
+          <option value="Cuddalore">Cuddalore</option>
+          <option value="Karaikudi">Karaikudi</option>
+          <option value="Krishnagiri">Krishnagiri</option>
+          <option value="Hosur">Hosur</option>
+          <option value="Dharmapuri">Dharmapuri</option>
+          <option value="Nagapattinam">Nagapattinam</option>
+          <option value="Nagercoil">Nagercoil</option>
+          <option value="Perambalur">Perambalur</option>
+          <option value="Ariyalur">Ariyalur</option>
+          <option value="Ramanathapuram">Ramanathapuram</option>
+          <option value="Sivakasi">Sivakasi</option>
+          <option value="Virudhunagar">Virudhunagar</option>
+          <option value="Kumbakonam">Kumbakonam</option>
+          <option value="Mayiladuthurai">Mayiladuthurai</option>
+          <option value="Tenkasi">Tenkasi</option>
+          <option value="Nilgiris">Nilgiris</option>
+
+        </select>
+
+        <fieldset style="margin-bottom: 10px;">
+          <legend>Choose Weather Type</legend>
+
+          <input type="radio" id="current" name="weatherType" value="current" required>
+          <label for="current">Current</label><br>
+
+          <input type="radio" id="tomorrow" name="weatherType" value="tomorrow">
+          <label for="tomorrow">Tomorrow</label>
+        </fieldset>
+        <input class="submitBtn" type="submit" value="Submit">
+      </form>
+      <div class="div2">
+        <% if (locals.city) { %>
+
+          <h3>City: <%= city %>
+          </h3>
+          <h3>Weather: <%= weather %>
+          </h3>
+          <h3>Temperature: <%= temp %> °C</h3>
+
+          <% } else if (locals.error) { %>
+            <h3 style="color:red;">
+              <%= error %>
+            </h3>
+            <% } else { %>
+              <h3>Choose city and submit to find weather</h3>
+              <% } %>
+      </div>
+    </div>
+  </div>
+</body>
+  
+<%} else { %>
+  <%= error %>
+<% } %>
+</html>

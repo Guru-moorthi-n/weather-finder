@@ -1,0 +1,123 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.bg-Default {
+    background-image: url('../images/Default.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Clear {
+    background-image: url('../images/Clear.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Clouds {
+    background-image: url('../images/Clouds.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Rain, .bg-Drizzle {
+    background-image: url('../images/Rain.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Thunderstorm {
+    background-image: url('../images/Strom.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Snow {
+    background-image: url('../images/Snow.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-Fog, .bg-Mist, .bg-Haze, .bg-Smoke {
+    background-image: url('../images/Fog.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3)
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 40%;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    height: 85vh;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+.div1,
+.div2 {
+    padding: 2em;
+    border: 2px solid black;
+    font-size: large;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.div2 {
+    margin-top: 30px;
+    height: 50%;
+    box-shadow: none;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.submitBtn {
+    height: 25px;
+    width: 75px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(144, 238, 144, 0.304);
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+    height: 25px;
+    width: 75px;
+    font-weight: bold;
+    border-radius: 5px;
+}
