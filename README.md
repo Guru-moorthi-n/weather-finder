@@ -132,12 +132,6 @@ Each condition dynamically changes the background image.
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots here if you want)*
-
----
-
 ## 📜 Disclaimer
 
 This project uses the **OpenWeather API** for educational purposes only.
